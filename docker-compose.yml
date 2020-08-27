@@ -1,11 +1,15 @@
 version: '3'
 services:
-  gocore:
-    container_name: gocore
+  gocore-mainnet:
+    container_name: gocore-mainnet
     image: docker.pkg.github.com/core-coin/go-core/gocore:latest
+    # Expose ports outside the server
     ports:
       # - "8545:8545/tcp" # HTTP-RPC
       # - "8546:8546/tcp" # WS
       # - "8547:8547/tcp" # GraphQL
       - "30300:30300/tcp"
       - "30300:30300/udp"
+    deploy:
+      restart_policy:
+        condition: on-failure

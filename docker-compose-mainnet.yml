@@ -1,13 +1,13 @@
 version: '3'
 services:
-  gocore-koliba:
-    container_name: gocore-koliba
+  gocore-mainnet:
+    container_name: gocore-mainnet
     build:
       context: https://github.com/core-coin/go-core.git
       dockerfile: Dockerfile
       args:
-        NETWORK: koliba
-        DATADIR: ~/.koliba
+        NETWORK: mainnet
+        DATADIR: ~/.core
         # Expose ports inside the container
         EXPOSEPORTS: 30300 30300/udp
     # Expose ports outside the server
