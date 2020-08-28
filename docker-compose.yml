@@ -12,4 +12,4 @@ services:
       - "30300:30300/udp"
     deploy:
       restart_policy:
-        condition: on-failure
+        condition: always
