@@ -7,7 +7,10 @@ services:
       dockerfile: Dockerfile
       args:
         NETWORK: devin
-        DATADIR: ~/.devin
+        CHAINDIR: /.devin
+        KEYDIR: ~/.devin/keystore
+        SYNCMODE: full
+        GCMODE: full
         # Expose ports inside the container
         EXPOSEPORTS: 30300 30300/udp
     # Expose ports outside the server
@@ -17,6 +20,8 @@ services:
       # - "8547:8547/tcp" # GraphQL
       - "30300:30300/tcp"
       - "30300:30300/udp"
+    volumes:
+      - devindata:/.devin
     deploy:
       restart_policy:
         condition: always

@@ -1,7 +1,7 @@
 version: '3'
 services:
-  gocore-mainnet:
-    container_name: gocore-mainnet
+  gocore-core:
+    container_name: gocore-core
     image: docker.pkg.github.com/core-coin/go-core/gocore:latest
     # Expose ports outside the server
     ports:

@@ -19,9 +19,12 @@ Docker-compose to easily build the Core Blockchain nodes - Boids.
 
 ### Arguments
 
-* `NETWORK` network name to deploy
-* `DATADIR` directory path to store Blockchain
-* `EXPOSEPORTS` ports to be exposed inside the docker container
+* `NETWORK` Network name to deploy
+* `CHAINDIR` Directory path to store Blockchain
+* `KEYDIR` Directory path to store keystore
+* `SYNCMODE` Blockchain sync mode ("fast", "full", or "light") (default: "full")
+* `GCMODE` Blockchain garbage collection mode ("full", "archive") (default: "full")
+* `EXPOSEPORTS` Ports to be exposed inside the docker container
 
 ### Ports
 
@@ -32,6 +35,12 @@ Ports to be exposed outside of the Docker container.
 * `8547:8547/tcp` GraphQL (disabled)
 * `30300:30300/tcp` Peers (enabled)
 * `30300:30300/udp` Peers (enabled)
+
+## Volumes
+
+Docker-compose is creating [Docker volume](https://docs.docker.com/storage/volumes), which is very useful for updating client without loosing Blockchain data.
+
+We are creating: `/.{network name}` with label `{network name}data`.
 
 ## Usage
 
