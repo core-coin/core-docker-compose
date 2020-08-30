@@ -8,7 +8,6 @@ services:
       args:
         NETWORK: koliba
         CHAINDIR: /.koliba
-        KEYDIR: ~/.koliba/keystore
         SYNCMODE: full
         GCMODE: full
         # Expose ports inside the container

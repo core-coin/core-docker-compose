@@ -8,7 +8,6 @@ services:
       args:
         NETWORK: mainnet
         CHAINDIR: /.core
-        KEYDIR: ~/.core/keystore
         SYNCMODE: full
         GCMODE: full
         # Expose ports inside the container

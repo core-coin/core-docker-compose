@@ -20,7 +20,7 @@ Docker-compose to easily build the Core Blockchain nodes - Boids.
 ### Arguments
 
 * `NETWORK` Network name to deploy
-* `CHAINDIR` Directory path to store Blockchain
+* `CHAINDIR` Directory path to store Blockchain data and node data
 * `KEYDIR` Directory path to store keystore
 * `SYNCMODE` Blockchain sync mode ("fast", "full", or "light") (default: "full")
 * `GCMODE` Blockchain garbage collection mode ("full", "archive") (default: "full")

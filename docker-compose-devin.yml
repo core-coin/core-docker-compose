@@ -8,7 +8,6 @@ services:
       args:
         NETWORK: devin
         CHAINDIR: /.devin
-        KEYDIR: ~/.devin/keystore
         SYNCMODE: full
         GCMODE: full
         # Expose ports inside the container
