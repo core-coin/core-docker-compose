@@ -7,7 +7,7 @@ services:
       dockerfile: Dockerfile
       args:
         NETWORK: devin
-        CHAINDIR: /.devin
+        CHAINDIR: /core/devin
         SYNCMODE: full
         GCMODE: full
         # Expose ports inside the container
@@ -20,7 +20,7 @@ services:
       - "30300:30300/tcp"
       - "30300:30300/udp"
     volumes:
-      - devindata:/.devin
+      - /core/devin:/var/lib/core/devin
     deploy:
       restart_policy:
         condition: always

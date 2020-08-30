@@ -7,7 +7,7 @@ services:
       dockerfile: Dockerfile
       args:
         NETWORK: koliba
-        CHAINDIR: /.koliba
+        CHAINDIR: /core/koliba
         SYNCMODE: full
         GCMODE: full
         # Expose ports inside the container
@@ -20,7 +20,7 @@ services:
       - "30300:30300/tcp"
       - "30300:30300/udp"
     volumes:
-      - kolibadata:/.koliba
+      - /core/koliba:/var/lib/core/koliba
     deploy:
       restart_policy:
         condition: always

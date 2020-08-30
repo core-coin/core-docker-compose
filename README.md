@@ -1,6 +1,6 @@
 # Docker Compose for CORE Network
 
-Docker-compose to easily build the Core Blockchain nodes - Boids.
+Docker-compose to easily build the Core Blockchain nodes — Boids.
 
 ## Variants
 
@@ -40,7 +40,7 @@ Ports to be exposed outside of the Docker container.
 
 Docker-compose is creating [Docker volume](https://docs.docker.com/storage/volumes), which is very useful for updating client without loosing Blockchain data.
 
-We are creating: `/.{network name}` with label `{network name}data`.
+We are creating volume: `/var/lib/core/{network name}` with mounting point `/core/{network name}`.
 
 ## Usage
 
